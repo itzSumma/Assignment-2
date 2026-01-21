@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* shared style */
+
+*{
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+.container{
+  width: 100%;
+  max-width:1200px;
+  margin: 0px auto;
+  
+}
+
+
+
+.btn-primary, .btn-primary-1{
+
+color:#FFFFFF ;
+font-size: 1rem;
+font-weight: 600;
+border: none;
+padding: 0.78rem 1rem 0.78rem 1.1rem;
+border-radius: 100px;
+background:linear-gradient(47.64deg, 
+rgba(247, 233, 63, 1),
+rgba(251, 9, 180, 1),
+rgba(145, 0, 248, 1));
+}
+
+.btn-secondary{
+
+padding: 0.75rem 1.25rem;
+border: 1px solid var(--#00FF88, rgba(0, 255, 136, 1));
+border-radius: 10000px;
+}
+
+/* Navbar-Style */
+header{
+  background-color: rgba(26, 11, 46, 1);
+}
+.nav{
+   border-bottom: 1px solid rgba(65, 37, 103, 1);
+
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+ 
+  
+}
+
+.nav-logo h1{
+color: rgba(255, 255, 255, 1);
+font-size: 60px;
+font-weight: 800;
+
+}
+.Wave{
+ background: linear-gradient(
+  136deg,
+  #F7E93F,
+  #FB09B4,
+  #9100F8
+); 
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.nav-menu li {
+  list-style: none;
+  display: inline;
+  margin-right: 1.5rem;
+  color:  rgba(255, 255, 255, 1);
+font-size: 1rem;
+text-align: left;
+
+
+}
+
+/* Banner-Section*/
+
+
+.banner-section{
+  height: 84vh;
+  background-image: url("../assets/hero-bg.png");
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+
+.banner-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.podcast-circle{
+  position: relative;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 8px solid rgba(42, 24, 108, 1);
+  background: linear-gradient(
+    45deg,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.circle-icon img{
+  width: 100%;
+  height: auto;
+}
+
+
+.badge-new{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #2cff8f;
+  color: #000;
+  font-size: 1.18rem;
+  font-weight: 600;
+  padding: 0.50rem 1rem;
+  border-radius: 999px;
+}
+
+.banner-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.banner-title{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.banner-description{
+  max-width: 520px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.banner-actions{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+
+.btn-secondary{
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: transparent;
+  color: #2cff8f;
+  border: 1px solid #2cff8f;
+}
+/*about-section */
+.about-section{
+padding: 3.125rem 12.5rem 7.5rem 12.5rem;
+color: #ebe3e3;
+background: rgba(26, 11, 46, 1);
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-content{
+max-width: 718px;
+margin: 0 auto;
+
+}
+.about-content h2{
+color: #FFFFFF;
+font-size: 3rem;
+font-weight: 700;
+text-align: center;
+margin-bottom: 1rem; 
+}
+.about-content p{
+color: #FFFFFF ;
+font-size: 1rem;
+text-align: center;
+opacity: 0.6;
+
+  
+}
+.thousands{
+ margin-top: 2rem;
+}
+
+hr{
+  margin: 4rem 0rem;
+  border: 1.5px solid  rgba(255, 255, 255, 1);
+  opacity: 0.1;
+
+}
+
+.about-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+ 
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card h4{
+color: #00FF88 ;
+font-size: 3rem;
+font-weight: 900;
+text-align: center;
+margin-bottom: 1rem;
+}
+
+.card span{
+color:  rgba(255, 255, 255, 1);
+font-size: 1rem;
+font-weight: 400;
+text-align: center;
+opacity: 0.8;
+
+}
+
+@media screen and (max-width: 576px){
+
+  /* container */
+  .container{
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+
+  .nav-menu,
+  .btn-primary-a{
+    display: none;
+  }
+  
+  .menu-bar{
+    color: white;
+  }
+
+
+
+  .btn-primary{
+    padding: 14px;
+  }
+
+
+
+
+  .nav-logo h1{
+    font-size: 1.8rem;
+  }
+
+  
+  .banner-section{
+
+  background-image: url("../assets/hero-bg.png");
+  background-size: 100% 100%;
+  background-position:center;
+  align-items: center;
+  height: auto;
+  padding: 3rem 0;
+  }
+
+  .podcast-circle{
+    /* Group 17 */
+width: 180px;
+height: 180px;
+   margin-top: 3rem;
+  }
+
+ .circle-icon img{
+    width: 50px;
+  
+  }
+
+  .badge-new{
+     font-size: 16px;
+    padding: 8px 16px 8px 16px;
+    top: -12px;
+    right: -12px;
+  }
+
+  .banner-title{
+    font-size: 2rem;
+  }
+
+  .banner-description{
+    font-size: 0.85rem;
+  }
+
+  .banner-actions{
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+
+
+  
+  .about-section{
+    padding: 3rem 1rem;
+  }
+
+  .about-content h2{
+    font-size: 2rem;
+  }
+
+  .about-cards{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card h4{
+    font-size: 2rem;
+  }
+
+  
+
+  
+
+/* Media-Query-for-Large-Tablets */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  
+  .container {
+    max-width: 960px; 
+    padding: 0 2rem;
+  }
+
+  /* Navbar */
+  .nav-logo h1 {
+    font-size: 48px; 
+  }
+
+ 
+  .banner-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .podcast-circle {
+    width: 350px;
+    height: 350px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+ 
+  .about-section {
+    padding: 4rem 2rem; 
+  }
+
+  
+}
+
+
+
