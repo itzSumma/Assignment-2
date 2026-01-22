@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 /* shared style */
 
 *{
@@ -8,7 +9,6 @@
   padding: 0;
   box-sizing: border-box; 
 }
-
 .container{
   width: 100%;
   max-width:1200px;
@@ -38,6 +38,25 @@ padding: 0.75rem 1.25rem;
 border: 1px solid var(--#00FF88, rgba(0, 255, 136, 1));
 border-radius: 10000px;
 }
+/* Primary-Button-Hover */
+
+.btn-primary:hover,
+.btn-primary-1:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(251, 9, 180, 0.4);
+  filter: brightness(1.1);
+}
+
+
+/* Secondary-Button-Hover */
+
+.btn-secondary:hover {
+  background: #2cff8f;
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(44, 255, 143, 0.2);
+}
+
 
 /* Navbar-Style */
 header{
@@ -299,9 +318,9 @@ opacity: 0.8;
   inset: -50%;
   background: linear-gradient(
     120deg,
-    #7b61ff,
-    #00f2ff,
-    #7b61ff
+    #2a1b75,
+    #48a7ac,
+    #0c033b
   );
   animation: rotateBorder 8s linear infinite;
   opacity: 0;
@@ -324,26 +343,44 @@ opacity: 0.8;
 }
 
 
-.why-card:hover{
+.why-card {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Hover movement + background */
+.why-card:hover {
   transform: translateY(-6px);
   background: rgba(255, 255, 255, 0.07);
 }
 
-.why-card:hover::before{
+/* Border glow effect */
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, #7b61ff, #00f2ff, #7b61ff);
+  border-radius: 18px;
+  opacity: 0;
+  animation: rotateBorder 4s linear infinite;
+  z-index: -1;
+}
+
+/* Show animation only on hover */
+.why-card:hover::before {
   opacity: 1;
 }
 
-
+/* Rotation animation */
 @keyframes rotateBorder {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
-
-
 
 .why-card-large{
   padding: 6rem 2.20rem;
