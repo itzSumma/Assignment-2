@@ -434,9 +434,249 @@ opacity: 0.8;
   opacity: 0.6;
 }
 
+
+
+
+/* FEATURED EPISODES */
+.featured-episodes{
+  background: rgba(26, 11, 46, 1);
+  padding: 6rem 0; 
+  color: #fff;
+}
+
+
+.featured-episodes .section-header{
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.featured-episodes .section-header h2{
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+
+.episodes-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+
+
+.episode-card{
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 18px 40px rgba(0,0,0,0.35);
+  transition: transform 0.35s ease,  0.35s ease;
+}
+
+.episode-card:hover{
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.08);
+}
+
+
+.episode-thumbnail{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.episode-thumbnail iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+
+}
+
+.episode-content{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.episode-content h3{
+color: #FFFFFF ;
+font-size: 1.25rem;
+font-weight: 700;
+text-align: left;
+}
+
+.episode-content p{
+ color: -#FFFFFF;
+font-size: 1rem;
+font-weight: 400;
+text-align: left;
+opacity: 0.6;
+
+}
+
+
+.episode-duration{
+  margin-top: auto;
+  font-size: 1rem;
+  color: #2cff8f;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.episode-duration i{
+  font-size: 0.75rem;
+}
+
+
+.meet-host{
+  padding: 6rem 0;
+  background: rgba(26, 11, 46, 1);
+}
+
+.host-card{
+  background: rgba(255,255,255,0.05);
+  border-radius: 22px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 20px 45px rgba(0,0,0,0.4);
+}
+
+
+.host-image img{
+  width: 100%;
+  height: 100%;
+
+width: 200px;
+height: 200px;
+}
+
+.host-info{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: #fff;
+}
+
+.host-info h3{
+color: -#FFFFFF;
+font-size: 2rem;
+font-weight: 700;
+text-align: left;
+
+}
+
+.host-info p{
+ color:#FFFFFF;
+font-size: 1rem;
+font-weight: 400;
+text-align: left;
+opacity: 0.8;
+
+}
+
+
+.host-social{
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.host-social a{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease,  0.4s ease;
+}
+
+.host-social a:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.15);
+}
+
+.host-social img{
+  width: 16px;
+  height: 16px;
+}
+
+/* FOOTER-SECTION */
+
+
+.footer {
+  background-color: #1a0b3c;
+  background-image: url("../assets/footer-bg.png"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-brand h2 {
+  font-size: 72px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.footer-brand .Wave {
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9100f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-platforms {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 16px;
+}
+
+.footer-platforms a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-platforms img {
+  width: 18px;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+
 @media screen and (max-width: 576px){
 
-  /* container */
+ 
   .container{
     width: 100%;
     padding: 0 1rem;
@@ -477,7 +717,7 @@ opacity: 0.8;
   }
 
   .podcast-circle{
-    /* Group 17 */
+   
 width: 180px;
 height: 180px;
    margin-top: 3rem;
@@ -529,46 +769,120 @@ height: 180px;
     font-size: 2rem;
   }
 
+  .why-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .why-card,
+  .why-card-large{
+    grid-column: auto !important;
+    grid-row: auto !important;
+    padding: 2rem;
+  }
+
+  .why-card-large{
+    padding: 2rem;
+  }
+
+  .why-card h3{
+    font-size: 1.1rem;
+  }
+
+  .why-card p{
+    font-size: 0.9rem;
+  }
+
+
+  .episodes-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .episode-content h3{
+    font-size: 1.1rem;
+  }
+
+  .episode-content p{
+    font-size: 0.9rem;
+  }
+
+  .host-card{
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .host-image img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  .host-info h3{
+    font-size: 1.5rem;
+     text-align: center;
+  }
+
+  .host-info p{
+    font-size: 0.9rem;
+    text-align: center;
+
+  }
+
+  .host-social{
+    justify-content: center;
+  }
+
   
-
-  
-
-/* Media-Query-for-Large-Tablets */
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  
-  .container {
-    max-width: 960px; 
-    padding: 0 2rem;
-  }
-
-  /* Navbar */
-  .nav-logo h1 {
-    font-size: 48px; 
-  }
- 
-
-  .banner-section {
-    height: auto;
-    padding: 4rem 0;
-  }
-
-  .podcast-circle {
-    width: 350px;
-    height: 350px;
-  }
-
-  .banner-title {
-    font-size: 2.5rem;
-  }
-
- 
-  .about-section {
-    padding: 4rem 2rem; 
-  }
-
-  
+   .footer {
+    padding: 60px 0;
+    
+    background-color: #1a0b3c;
+    background-image: url(../assets/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150% 100%;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
 }
+  
+
+  .footer-brand h2 {
+    font-size: 48px; /
+ 
+  }
+
+
+  .footer-platforms {
+    display: flex;
+    
+    gap: 20px 40px; 
+    width: 255px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+  }
+
+  .footer-platforms a {
+    justify-content: center;
+    justify-items: center;
+    
+  }
+
+  .footer-copy {
+    margin-top: 30px;
+    line-height: 1.5;
+  }
+
+
+}
+
+
+
+  
+
+
 
 
 
